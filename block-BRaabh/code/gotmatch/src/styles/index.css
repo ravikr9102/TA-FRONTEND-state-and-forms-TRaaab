@@ -41,6 +41,9 @@ header {
 
 
 /* Main starts here */
+.main{
+  margin-left: 3rem;
+}
 .tags{
     background-color: black;
     color: #fff;
