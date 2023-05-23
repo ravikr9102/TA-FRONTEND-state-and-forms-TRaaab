@@ -18,13 +18,13 @@ class Cards extends React.Component {
     });
     this.setState({
       activeIndex: index,
-    })
+    });
   };
   render() {
     return (
       <>
         <ul className="main">
-          {data.map((e,index) => (
+          {data.map((e, index) => (
             <li key={e.Title} className="flex-45">
               <div className="flex-row">
                 <h2>{e.Title}</h2>
@@ -37,13 +37,18 @@ class Cards extends React.Component {
             </li>
           ))}
         </ul>
-        {this.state.isVisible ? (<MovieInfo 
-             moreInfo={data[this.state.activeIndex]}
-             handleClick={this.handleClick}
-        /> ) : ('')}
+        {this.state.isVisible ? (
+          <MovieInfo
+            moreInfo={data[this.state.activeIndex]}
+          />
+        ) : (
+          ''
+        )}
       </>
     );
   }
 }
 
 export default Cards;
+
+
