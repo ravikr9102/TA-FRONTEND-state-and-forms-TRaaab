@@ -4,7 +4,7 @@ function Sizes(props) {
       <h1 className="size-heading">Sizes Available:</h1>
       <ul className="sizes">
         {props.sizes.map((size) => (
-          <li
+          <li 
             className={props.activeSize.includes(size) ? 'active' : ''}
             onClick={() => {
               props.handleSize(size);
