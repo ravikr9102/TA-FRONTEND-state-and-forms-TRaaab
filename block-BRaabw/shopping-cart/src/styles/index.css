@@ -183,6 +183,14 @@ button:hover {
 .sidebar li:hover {
   border: 1px solid;
 }
+.active {
+  color: blue;
+}
+.size-heading{
+  padding-bottom:1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
 header {
   padding-top: 20px;
   margin-bottom: 32px;
@@ -325,4 +333,8 @@ strong {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 900;
+}
+.select{
+  padding: .4rem;
+  margin-left: .2rem;
 }

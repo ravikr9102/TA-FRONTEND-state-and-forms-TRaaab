@@ -5,8 +5,8 @@ function Product(props) {
       <header className="product-wrapper flex">
         <h5>{props.total} prodcts found</h5>
         <label htmlFor="">
-          sort by:
-          <select onChange={props.onChange} name="select" id="">
+          Order by 
+          <select className="select"  onChange={props.onChange} name="select" id="">
             <option value="select">Select</option>
             <option value="LowestToHighest">Lowest to Highest</option>
             <option value="HighestToLowest">Highest to Lowest</option>
@@ -37,5 +37,4 @@ function Product(props) {
     </>
   );
 }
-
 export default Product;

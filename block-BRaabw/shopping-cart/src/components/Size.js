@@ -1,10 +1,17 @@
 function Sizes(props) {
   return (
     <aside className="sidebar">
-      {/* <p>Sizes Available:</p> */}
+      <h1 className="size-heading">Sizes Available:</h1>
       <ul className="sizes">
-        {props.sizes.map((size,i) => (
-          <li onClick={() => {props.handleSize(size)}}>{size}</li>
+        {props.sizes.map((size) => (
+          <li
+            className={props.activeSize.includes(size) ? 'active' : ''}
+            onClick={() => {
+              props.handleSize(size);
+            }}
+          >
+            {size}
+          </li>
         ))}
       </ul>
     </aside>

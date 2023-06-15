@@ -9,7 +9,7 @@ class App extends React.Component {
     super();
     this.state = {
       cart: [],
-      select: 'Select',
+      select: 'select',
       sortedFilteredArray: [],
       activeSize: [],
     };
@@ -21,7 +21,7 @@ class App extends React.Component {
     } else {
       array = [...this.state.activeSize, size];
     }
-    this.setState({ activeSize: array })
+    this.setState({ activeSize: array }, () => this.sortData())
   };
   handleSort = ({ target }) => {
     let { name, value } = target;
@@ -86,6 +86,9 @@ class App extends React.Component {
           this.state.activeSize.includes(size)
         )
       );
+      this.setState({
+        sortedFilteredArray: filterProduct,
+      })
     }
     if (value === 'LowestToHighest') {
       filterProduct.sort((a, b) => a.price - b.price);
@@ -99,9 +102,9 @@ class App extends React.Component {
         sortedFilteredArray: filterProduct,
       });
     }
-    else if(value === 'select'){
+    if(value === 'select'){
         this.setState({
-            sortedFilteredArray: allProduct,
+            sortedFilteredArray: filterProduct,
         })
     }
   };
