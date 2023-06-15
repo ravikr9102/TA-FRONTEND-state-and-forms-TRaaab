@@ -3,7 +3,7 @@ function Product(props) {
   return (
     <>
       <header className="product-wrapper flex">
-        <h5>{props.total} prodcts found</h5>
+        <h5 className="product-fo">{props.total} prodcts found</h5>
         <label htmlFor="">
           Order by 
           <select className="select"  onChange={props.onChange} name="select" id="">

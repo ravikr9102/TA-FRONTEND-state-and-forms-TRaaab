@@ -13,6 +13,7 @@ class Cart extends React.Component {
       isVisible: !this.state.isVisible,
     });
   };
+  subTotal = {};
   render() {
     return (
       <aside className="cart">
@@ -44,7 +45,12 @@ class Cart extends React.Component {
                   </span>
                   <strong className="cart-price">${item.price}</strong>
                   <button onClick={() => this.props.increment(item)}>+</button>
-                  <button onClick={() => this.props.decrement(item)}>-</button>
+                  <button
+                    disabled={item.quantity === 1 ? true : false}
+                    onClick={() => this.props.decrement(item)}
+                  >
+                    -
+                  </button>
                   <strong onClick={() => this.props.delete(i)}>X</strong>
                 </li>
               ))}
@@ -52,11 +58,25 @@ class Cart extends React.Component {
             <footer className="flex footer">
               <h5>Subtotoal</h5>
               <h6 className="total-price">
+                $
                 {this.props.cart.reduce(
                   (acc, cv) => acc + cv.price * cv.quantity,
                   0
                 )}
               </h6>
+              <button
+                className="check-btn"
+                onClick={() =>
+                  alert(
+                    this.props.cart.reduce(
+                      (acc, cv) => acc + cv.price * cv.quantity,
+                      0
+                    )
+                  )
+                }
+              >
+                Checkout
+              </button>
             </footer>
           </div>
         ) : (

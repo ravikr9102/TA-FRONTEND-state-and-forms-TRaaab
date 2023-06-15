@@ -186,8 +186,8 @@ button:hover {
 .active {
   color: blue;
 }
-.size-heading{
-  padding-bottom:1rem;
+.size-heading {
+  padding-bottom: 1rem;
   font-size: 1.1rem;
   font-weight: 800;
 }
@@ -211,6 +211,10 @@ header {
 }
 .prodcut-list img {
   width: 100%;
+}
+.product-fo {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 p {
   font-size: 0.7rem;
@@ -311,7 +315,7 @@ strong {
   cursor: pointer;
 }
 .total-price {
-  margin-right: 4rem;
+  margin-left: 0.7rem;
 }
 .tshirt-style {
   margin-left: 1.9rem;
@@ -334,7 +338,11 @@ strong {
   font-size: 1.2rem;
   font-weight: 900;
 }
-.select{
-  padding: .4rem;
-  margin-left: .2rem;
+.select {
+  padding: 0.4rem;
+  margin-left: 0.2rem;
+}
+.check-btn {
+  margin-right: 9rem;
+  margin-top: 4rem;
 }
